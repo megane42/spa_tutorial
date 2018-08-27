@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n    render() {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n            'h1',\n            null,\n            'Hello World'\n        );\n    }\n}\n\n//# sourceURL=webpack:///./App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Rect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Rect */ \"./Rect.js\");\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n    render() {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n            'div',\n            null,\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Rect__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { num: 1, bgcolor: '#e02020' }),\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Rect__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { num: 2, bgcolor: '#20e020' }),\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Rect__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { num: 3, bgcolor: '#2020e0' })\n        );\n    }\n}\n\n//# sourceURL=webpack:///./App.js?");
+
+/***/ }),
+
+/***/ "./Rect.js":
+/*!*****************!*\
+  !*** ./Rect.js ***!
+  \*****************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Rect; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass Rect extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n    constructor(props) {\n        super(props);\n        this.state = { number: this.props.num };\n    }\n\n    componentDidMount() {\n        const { num, bgcolor } = this.props;\n        this.rectStyle = {\n            background: bgcolor,\n            display: 'table-cell',\n            border: '1px #000 solid',\n            fontSize: 20,\n            width: 30,\n            height: 30,\n            textAlign: 'center',\n            verticalAlign: 'center'\n        };\n    }\n\n    countUp(num) {\n        this.setState({ number: num + 1 });\n    }\n\n    render() {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n            'div',\n            { style: this.rectStyle, onClick: e => this.countUp(this.state.number) },\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n                'span',\n                { style: { color: '#eeeeee' } },\n                this.state.number\n            )\n        );\n    }\n}\n\n//# sourceURL=webpack:///./Rect.js?");
 
 /***/ }),
 

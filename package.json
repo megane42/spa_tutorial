@@ -10,6 +10,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "webpack": "^4.17.1",
-    "webpack-command": "^0.4.1"
+    "webpack-command": "^0.4.1",
+    "webpack-serve": "^2.0.2"
   }
 }
